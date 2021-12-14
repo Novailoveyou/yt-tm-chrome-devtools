@@ -40,19 +40,27 @@
       //   })
       // }
       // greaterThan(4, 5)
-      const getUsers = async () => {
-        const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-        const data = await res.json()
-        data.forEach(
-          item =>
-            (document.getElementById(
-              'containerUsers'
-            ).innerHTML += `${item.title} <br />`)
-        )
-        console.log('Users returned')
-      }
+      // const getUsers = async () => {
+      //   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+      //   const data = await res.json()
+      //   data.forEach(
+      //     item =>
+      //       (document.getElementById(
+      //         'containerUsers'
+      //       ).innerHTML += `${item.title} <br />`)
+      //   )
+      //   console.log('Users returned')
+      // }
 
-      document.getElementById('btnGetUsers').addEventListener('click', getUsers)
+      // document.getElementById('btnGetUsers').addEventListener('click', getUsers)
+
+      // localStorage.setItem('name', 'John')
+      // const name = localStorage.getItem('name')
+      // localStorage.clear('name')
+
+      // sessionStorage.setItem('car', 'BMW')
+
+      // document.cookie = 'username=John Doe'
     </script>
   </body>
 </html>
