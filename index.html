@@ -8,6 +8,8 @@
   </head>
   <body>
     <h1>Devtools Sandbox</h1>
+    <button id="btnGetUsers">Get Users</button>
+    <div id="containerUsers"></div>
 
     <script>
       // console.log('Hello')
@@ -38,6 +40,19 @@
       //   })
       // }
       // greaterThan(4, 5)
+      const getUsers = async () => {
+        const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const data = await res.json()
+        data.forEach(
+          item =>
+            (document.getElementById(
+              'containerUsers'
+            ).innerHTML += `${item.title} <br />`)
+        )
+        console.log('Users returned')
+      }
+
+      document.getElementById('btnGetUsers').addEventListener('click', getUsers)
     </script>
   </body>
 </html>
